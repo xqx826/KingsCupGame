@@ -45,14 +45,15 @@ public class KingsCupGame {
         }
         
         if card.rank == Rank.two {
-            for player in players {
-                player.has_two = false
-            }
-            players[curr_player].has_two = true
+            let newPlayer = Player(name: players[curr_player].name)
+            newPlayer.has_two = true
+            update_has_two(playerID: curr_player, newPlayer: newPlayer)
         }
         
         if card.rank == Rank.eight {
-            players[curr_player].num_of_eight += 1
+            let newPlayer = Player(name: players[curr_player].name)
+            newPlayer.num_of_eight = players[curr_player].num_of_eight + 1
+            update_num_eight(playerID: curr_player, newPlayer: newPlayer)
         }
         
         if card.rank == Rank.king {
@@ -71,6 +72,34 @@ public class KingsCupGame {
         self.curr_card = newCard
     }
     
+
+    public func update_num_eight(playerID: Int, newPlayer: Player) {
+        var temp_players: [Player] = []
+        // when updating player to indicate new owner of 2, we want to make all previous owners' has_two = false
+        // when updating player with number of eight, we want to keep all the previously stored data
+        for i in 0 ..< players.count {
+            let player = Player(name: players[i].name)
+            player.has_two = players[i].has_two
+            player.num_of_eight = players[i].num_of_eight
+            temp_players.append(player)
+        }
+        temp_players[playerID] = newPlayer
+        self.players = temp_players
+    }
+    
+    public func update_has_two(playerID: Int, newPlayer: Player) {
+        var temp_players: [Player] = []
+        // when updating player to indicate new owner of 2, we want to make all previous owners' has_two = false
+        // when updating player with number of eight, we want to keep all the previously stored data
+        for i in 0 ..< players.count {
+            let player = Player(name: players[i].name)
+            player.num_of_eight = players[i].num_of_eight
+            temp_players.append(player)
+        }
+        temp_players[playerID] = newPlayer
+        self.players = temp_players
+    }
+    
     public func next_round() {
         let num_players = players.count
         if curr_player < num_players - 1 {
@@ -82,6 +111,8 @@ public class KingsCupGame {
         var temp_players: [Player] = []
         for i in 0..<num_players {
             let player = Player(name: players[i].name)
+            player.has_two = players[i].has_two
+            player.num_of_eight = players[i].num_of_eight
             if i == curr_player {
                 player.isPlaying = true
             }

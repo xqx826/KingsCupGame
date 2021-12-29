@@ -21,6 +21,9 @@ struct PlayerView: View {
                     .frame(width: 200, height: 50)
                     .background(Color.green)
             }
+            if player.has_two {
+                Text("TWO!!!")
+            }
         }
     }
 }
