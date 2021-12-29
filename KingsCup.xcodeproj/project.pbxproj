@@ -13,6 +13,15 @@
 		21145E09277AF537009342C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145DF7277AF535009342C5 /* ContentView.swift */; };
 		21145E0A277AF537009342C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21145DF8277AF537009342C5 /* Assets.xcassets */; };
 		21145E0B277AF537009342C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21145DF8277AF537009342C5 /* Assets.xcassets */; };
+		21145E16277AF5FF009342C5 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E15277AF5FF009342C5 /* Card.swift */; };
+		21145E18277AF76A009342C5 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E17277AF76A009342C5 /* Deck.swift */; };
+		21145E1B277AFFD6009342C5 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E1A277AFFD6009342C5 /* Color+Extension.swift */; };
+		21145E1D277B01A4009342C5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E1C277B01A4009342C5 /* Player.swift */; };
+		21145E1F277B0909009342C5 /* KingsCupGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E1E277B0909009342C5 /* KingsCupGame.swift */; };
+		21145E23277B0F1D009342C5 /* KingsCupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E22277B0F1D009342C5 /* KingsCupViewModel.swift */; };
+		21145E25277C2EF5009342C5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E24277C2EF5009342C5 /* CardView.swift */; };
+		21145E27277C2F4D009342C5 /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E26277C2F4D009342C5 /* PlayersListView.swift */; };
+		21145E29277C434C009342C5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E28277C434C009342C5 /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		21145DFD277AF537009342C5 /* KingsCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21145E03277AF537009342C5 /* KingsCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21145E05277AF537009342C5 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		21145E15277AF5FF009342C5 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		21145E17277AF76A009342C5 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		21145E1A277AFFD6009342C5 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		21145E1C277B01A4009342C5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		21145E1E277B0909009342C5 /* KingsCupGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsCupGame.swift; sourceTree = "<group>"; };
+		21145E22277B0F1D009342C5 /* KingsCupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsCupViewModel.swift; sourceTree = "<group>"; };
+		21145E24277C2EF5009342C5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		21145E26277C2F4D009342C5 /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
+		21145E28277C434C009342C5 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +72,11 @@
 		21145DF5277AF535009342C5 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				21145E2A277C45B7009342C5 /* View */,
+				21145E21277B0F06009342C5 /* ViewModel */,
+				21145E19277AFFAA009342C5 /* Extensions */,
+				21145E14277AF5E6009342C5 /* Model */,
 				21145DF6277AF535009342C5 /* KingsCupApp.swift */,
-				21145DF7277AF535009342C5 /* ContentView.swift */,
 				21145DF8277AF537009342C5 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +97,44 @@
 				21145E05277AF537009342C5 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		21145E14277AF5E6009342C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21145E15277AF5FF009342C5 /* Card.swift */,
+				21145E17277AF76A009342C5 /* Deck.swift */,
+				21145E1C277B01A4009342C5 /* Player.swift */,
+				21145E1E277B0909009342C5 /* KingsCupGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21145E19277AFFAA009342C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21145E1A277AFFD6009342C5 /* Color+Extension.swift */,
+				21145E28277C434C009342C5 /* Array+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		21145E21277B0F06009342C5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				21145E22277B0F1D009342C5 /* KingsCupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		21145E2A277C45B7009342C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21145DF7277AF535009342C5 /* ContentView.swift */,
+				21145E24277C2EF5009342C5 /* CardView.swift */,
+				21145E26277C2F4D009342C5 /* PlayersListView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +235,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21145E18277AF76A009342C5 /* Deck.swift in Sources */,
+				21145E25277C2EF5009342C5 /* CardView.swift in Sources */,
+				21145E1B277AFFD6009342C5 /* Color+Extension.swift in Sources */,
+				21145E29277C434C009342C5 /* Array+Extension.swift in Sources */,
+				21145E23277B0F1D009342C5 /* KingsCupViewModel.swift in Sources */,
 				21145E08277AF537009342C5 /* ContentView.swift in Sources */,
+				21145E27277C2F4D009342C5 /* PlayersListView.swift in Sources */,
+				21145E16277AF5FF009342C5 /* Card.swift in Sources */,
+				21145E1F277B0909009342C5 /* KingsCupGame.swift in Sources */,
+				21145E1D277B01A4009342C5 /* Player.swift in Sources */,
 				21145E06277AF537009342C5 /* KingsCupApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
