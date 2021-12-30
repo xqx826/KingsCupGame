@@ -1,0 +1,19 @@
+name: xcodebuild iphone 12
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: xcodebuild build-for-testing -scheme 'KingsCup (iOS)' -project=KingsCup -destination "platform=iOS Simulator,name=iPhone 12"
+    - name: Run tests
+      run: xcodebuild test-without-building -scheme 'KingsCup (iOS)' -project=KingsCup.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 12'
