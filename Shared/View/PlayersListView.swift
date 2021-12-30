@@ -12,16 +12,13 @@ struct PlayerView: View {
     var player: Player
     var body: some View {
         HStack {
-            if !player.isPlaying {
-                Text("Player \(player.name)")
-                    .frame(width: 200, height: 50, alignment: .leading)
-                    .background(Color.pink)
-        
-            } else {
-                Text("Player \(player.name)")
-                    .frame(width: 200, height: 50)
-                    .background(Color.green)
-            }
+            Text("Player \(player.name)")
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .frame(width: 200, height: 50)
+                .cornerRadius(5)
+                .background(player.isPlaying ? Color.highlightedYellow : Color.highlightedGray)
+                .cornerRadius(10)
+            
             if player.has_two {
                 SmallerCard(cardRank: Rank.two)
             }

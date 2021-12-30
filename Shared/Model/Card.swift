@@ -35,6 +35,7 @@ public class Card: Identifiable {
     var rank: Rank
     var suit: Suit
     var isFacingUp: Bool = false
+    
     public init(id: Int, rank: Rank, suit: Suit) {
         self.id = id
         self.rank = rank

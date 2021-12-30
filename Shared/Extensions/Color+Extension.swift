@@ -28,4 +28,12 @@ extension Color {
     public static var cardForegroundColor: Color {
         return Color(UIColor(red: 129/255, green: 199/255, blue: 212/255, alpha: 1.0))
     }
+    
+    public static var highlightedYellow: Color {
+        return Color(UIColor(red: 250/255, green: 214/255, blue: 137/255, alpha: 1.0))
+    }
+    
+    public static var highlightedGray: Color {
+        return Color(UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1.0))
+    }
 }
