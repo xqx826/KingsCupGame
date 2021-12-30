@@ -22,8 +22,19 @@ struct PlayerView: View {
                     .background(Color.green)
             }
             if player.has_two {
-                Text("TWO!!!")
+                SmallerCard(cardRank: Rank.two)
             }
+            if player.num_of_eight > 0 {
+                HStack {
+                    ForEach(0..<player.num_of_eight, id:\.self) { _ in
+                        SmallerCard(cardRank: Rank.eight)
+                    }
+                }
+            }
+        }
+        .onTapGesture {
+            print("player \(player.name) is")
+            print("Trying to use card")
         }
     }
 }
@@ -31,7 +42,6 @@ struct PlayerView: View {
 struct PlayerListView: View {
     var players: [Player]
     var body: some View {
-        // Text("placeholer")
         ForEach(players, id: \.name) { player in
             HStack {
             PlayerView(player: player)

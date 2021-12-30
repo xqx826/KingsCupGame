@@ -27,10 +27,28 @@ struct CardView: View {
     
 }
 
+struct SmallerCard: View {
+    var cardRank: Rank
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .fill(Color.cardForegroundColor)
+                .frame(width: 30, height: 50, alignment: .center)
+                .shadow(radius: 3)
+            
+            Text(CardFront.getRankText(rank: cardRank))
+                .font(.system(size: 30, weight: .semibold, design: .rounded))
+                .foregroundColor(Color.white)
+        }
+    }
+}
+
+
+
 struct CardFront: View {
     var card: Card
     
-    func getSuitImageName(suit: Suit) -> String {
+    static func getSuitImageName(suit: Suit) -> String {
         switch suit {
         case .club:
             return "suit.club.fill"
@@ -43,7 +61,7 @@ struct CardFront: View {
         }
     }
     
-    func getRankText(rank: Rank) -> String {
+    static func getRankText(rank: Rank) -> String {
         switch rank {
         case .ace:
             return "A"
@@ -65,7 +83,7 @@ struct CardFront: View {
                 .frame(width: 300, height: 500, alignment: .center)
             VStack {
                 HStack{
-                    Image(systemName: getSuitImageName(suit: card.suit))
+                    Image(systemName: CardFront.getSuitImageName(suit: card.suit))
                         .resizable()
                         .foregroundColor(Color.white)
                         .scaledToFit()
@@ -75,14 +93,14 @@ struct CardFront: View {
                 }
                 
                 Spacer()
-                Text(getRankText(rank: card.rank))
+                Text(CardFront.getRankText(rank: card.rank))
                     .font(.system(size: 70, weight: .semibold, design: .rounded))
                     .foregroundColor(Color.white)
                 Spacer()
                 
                 HStack {
                     Spacer()
-                    Image(systemName: getSuitImageName(suit: card.suit))
+                    Image(systemName: CardFront.getSuitImageName(suit: card.suit))
                         .resizable()
                         .foregroundColor(Color.white)
                         .scaledToFit()
