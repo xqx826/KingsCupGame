@@ -87,6 +87,7 @@ public class KingsCupViewModel: ObservableObject {
             model.players[model.curr_player].has_two = true
         }
         if card.rank == Rank.eight {
+            // TODO: Potential bug 按慢一点可能就没有bug了
             model.players[model.curr_player].num_of_eight += 1
         }
         if card.rank == Rank.king {
@@ -96,5 +97,11 @@ public class KingsCupViewModel: ObservableObject {
             }
         }
         self.model = model
+    }
+    func use_eight(playerID: Int) {
+        if self.model.players[playerID].num_of_eight > 0 {
+            self.model.players[playerID].num_of_eight -= 1
+            self.model = model
+        }
     }
 }

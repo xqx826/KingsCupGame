@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayerView: View {
+    @ObservedObject var viewModel: KingsCupViewModel
     var player: Player
     var body: some View {
         HStack {
@@ -33,18 +34,19 @@ struct PlayerView: View {
             }
         }
         .onTapGesture {
-            print("player \(player.name) is")
-            print("Trying to use card")
+            print("player \(player.name) is removing...")
+            viewModel.use_eight(playerID: Int(player.name)!)
         }
     }
 }
 
 struct PlayerListView: View {
-    var players: [Player]
+    @ObservedObject var viewModel: KingsCupViewModel
     var body: some View {
+        let players = viewModel.players!
         ForEach(players, id: \.name) { player in
             HStack {
-            PlayerView(player: player)
+                PlayerView(viewModel: viewModel, player: player)
                 Spacer()
             }
         }
