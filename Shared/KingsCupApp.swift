@@ -11,7 +11,7 @@ import SwiftUI
 struct KingsCupApp: App {
     var body: some Scene {
         WindowGroup {
-            PlayerConfigView()
+            PlayerConfigView(viewModel: PlayerConfigViewModel())
             // ContentView(gameViewModel: KingsCupViewModel(num_players: 4))
         }
     }

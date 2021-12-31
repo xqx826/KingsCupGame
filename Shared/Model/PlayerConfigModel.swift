@@ -9,6 +9,6 @@ import Foundation
 
 struct PlayerConfigModel {
     var num_of_players: Int = 2
-    var names: [String] = ["", ""]
-    
+    var names = Array(repeating: "", count: 10)
+    var is_completed: Bool = false
 }

@@ -22,8 +22,10 @@ struct ContentView: View {
             .padding()
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBackground)
+        
     }
 }
 
