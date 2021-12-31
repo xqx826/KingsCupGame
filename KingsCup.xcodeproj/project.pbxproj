@@ -25,7 +25,18 @@
 		21145E2C277E77D5009342C5 /* PlayerConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E2B277E77D5009342C5 /* PlayerConfigView.swift */; };
 		21145E2E277E829B009342C5 /* PlayerConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E2D277E829B009342C5 /* PlayerConfigModel.swift */; };
 		21145E30277E82EE009342C5 /* PlayerConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E2F277E82EE009342C5 /* PlayerConfigViewModel.swift */; };
+		4A5F1611277DA84700089406 /* KingsCupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5F1610277DA84700089406 /* KingsCupTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A5F1612277DA84700089406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21145DF1277AF534009342C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21145DFC277AF537009342C5;
+			remoteInfo = "KingsCup (iOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		21145DF6277AF535009342C5 /* KingsCupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsCupApp.swift; sourceTree = "<group>"; };
@@ -46,6 +57,8 @@
 		21145E2B277E77D5009342C5 /* PlayerConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigView.swift; sourceTree = "<group>"; };
 		21145E2D277E829B009342C5 /* PlayerConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigModel.swift; sourceTree = "<group>"; };
 		21145E2F277E82EE009342C5 /* PlayerConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigViewModel.swift; sourceTree = "<group>"; };
+		4A5F160E277DA84700089406 /* KingsCupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KingsCupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A5F1610277DA84700089406 /* KingsCupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingsCupTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4A5F160B277DA84700089406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +91,7 @@
 			children = (
 				21145DF5277AF535009342C5 /* Shared */,
 				21145E04277AF537009342C5 /* macOS */,
+				4A5F160F277DA84700089406 /* KingsCupTests */,
 				21145DFE277AF537009342C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +114,7 @@
 			children = (
 				21145DFD277AF537009342C5 /* KingsCup.app */,
 				21145E03277AF537009342C5 /* KingsCup.app */,
+				4A5F160E277DA84700089406 /* KingsCupTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +168,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4A5F160F277DA84700089406 /* KingsCupTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A5F1610277DA84700089406 /* KingsCupTests.swift */,
+			);
+			path = KingsCupTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +213,24 @@
 			productReference = 21145E03277AF537009342C5 /* KingsCup.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4A5F160D277DA84700089406 /* KingsCupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A5F1616277DA84700089406 /* Build configuration list for PBXNativeTarget "KingsCupTests" */;
+			buildPhases = (
+				4A5F160A277DA84700089406 /* Sources */,
+				4A5F160B277DA84700089406 /* Frameworks */,
+				4A5F160C277DA84700089406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A5F1613277DA84700089406 /* PBXTargetDependency */,
+			);
+			name = KingsCupTests;
+			productName = KingsCupTests;
+			productReference = 4A5F160E277DA84700089406 /* KingsCupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,6 +246,10 @@
 					};
 					21145E02277AF537009342C5 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					4A5F160D277DA84700089406 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 21145DFC277AF537009342C5;
 					};
 				};
 			};
@@ -216,6 +268,7 @@
 			targets = (
 				21145DFC277AF537009342C5 /* KingsCup (iOS) */,
 				21145E02277AF537009342C5 /* KingsCup (macOS) */,
+				4A5F160D277DA84700089406 /* KingsCupTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +287,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21145E0B277AF537009342C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A5F160C277DA84700089406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +330,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4A5F160A277DA84700089406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A5F1611277DA84700089406 /* KingsCupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A5F1613277DA84700089406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21145DFC277AF537009342C5 /* KingsCup (iOS) */;
+			targetProxy = 4A5F1612277DA84700089406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		21145E0C277AF537009342C5 /* Debug */ = {
@@ -501,6 +577,55 @@
 			};
 			name = Release;
 		};
+		4A5F1614277DA84700089406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SherryXu.KingsCupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KingsCup.app/KingsCup";
+			};
+			name = Debug;
+		};
+		4A5F1615277DA84700089406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SherryXu.KingsCupTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KingsCup.app/KingsCup";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,6 +652,15 @@
 			buildConfigurations = (
 				21145E12277AF537009342C5 /* Debug */,
 				21145E13277AF537009342C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A5F1616277DA84700089406 /* Build configuration list for PBXNativeTarget "KingsCupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A5F1614277DA84700089406 /* Debug */,
+				4A5F1615277DA84700089406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
