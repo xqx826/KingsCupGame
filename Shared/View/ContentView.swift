@@ -11,8 +11,7 @@ struct ContentView: View {
     @ObservedObject var gameViewModel: KingsCupViewModel
     var body: some View {
         VStack {
-        // PlayerListView(players: gameViewModel.players)
-        PlayerListView(players: gameViewModel.players!)
+        PlayerListView(viewModel: gameViewModel)
                 .padding(.top)
                 .padding(.leading)
         Spacer()
