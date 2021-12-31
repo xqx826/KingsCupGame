@@ -22,6 +22,9 @@
 		21145E25277C2EF5009342C5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E24277C2EF5009342C5 /* CardView.swift */; };
 		21145E27277C2F4D009342C5 /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E26277C2F4D009342C5 /* PlayersListView.swift */; };
 		21145E29277C434C009342C5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E28277C434C009342C5 /* Array+Extension.swift */; };
+		21145E2C277E77D5009342C5 /* PlayerConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E2B277E77D5009342C5 /* PlayerConfigView.swift */; };
+		21145E2E277E829B009342C5 /* PlayerConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E2D277E829B009342C5 /* PlayerConfigModel.swift */; };
+		21145E30277E82EE009342C5 /* PlayerConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21145E2F277E82EE009342C5 /* PlayerConfigViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		21145E24277C2EF5009342C5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		21145E26277C2F4D009342C5 /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
 		21145E28277C434C009342C5 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		21145E2B277E77D5009342C5 /* PlayerConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigView.swift; sourceTree = "<group>"; };
+		21145E2D277E829B009342C5 /* PlayerConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigModel.swift; sourceTree = "<group>"; };
+		21145E2F277E82EE009342C5 /* PlayerConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfigViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 				21145E17277AF76A009342C5 /* Deck.swift */,
 				21145E1C277B01A4009342C5 /* Player.swift */,
 				21145E1E277B0909009342C5 /* KingsCupGame.swift */,
+				21145E2D277E829B009342C5 /* PlayerConfigModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				21145E22277B0F1D009342C5 /* KingsCupViewModel.swift */,
+				21145E2F277E82EE009342C5 /* PlayerConfigViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,6 +141,7 @@
 				21145DF7277AF535009342C5 /* ContentView.swift */,
 				21145E24277C2EF5009342C5 /* CardView.swift */,
 				21145E26277C2F4D009342C5 /* PlayersListView.swift */,
+				21145E2B277E77D5009342C5 /* PlayerConfigView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,8 +247,11 @@
 				21145E18277AF76A009342C5 /* Deck.swift in Sources */,
 				21145E25277C2EF5009342C5 /* CardView.swift in Sources */,
 				21145E1B277AFFD6009342C5 /* Color+Extension.swift in Sources */,
+				21145E2C277E77D5009342C5 /* PlayerConfigView.swift in Sources */,
+				21145E2E277E829B009342C5 /* PlayerConfigModel.swift in Sources */,
 				21145E29277C434C009342C5 /* Array+Extension.swift in Sources */,
 				21145E23277B0F1D009342C5 /* KingsCupViewModel.swift in Sources */,
+				21145E30277E82EE009342C5 /* PlayerConfigViewModel.swift in Sources */,
 				21145E08277AF537009342C5 /* ContentView.swift in Sources */,
 				21145E27277C2F4D009342C5 /* PlayersListView.swift in Sources */,
 				21145E16277AF5FF009342C5 /* Card.swift in Sources */,
