@@ -34,7 +34,7 @@ struct PlayerConfigView: View {
                 }
                 if viewModel.isCompleted {
                     // Text("COMPLETEDDDDD")
-                    NavigationLink(destination: ContentView(gameViewModel: KingsCupViewModel(num_players: viewModel.num_players))) {
+                    NavigationLink(destination: ContentView(gameViewModel: KingsCupViewModel(num_players: viewModel.num_players, names: viewModel.players_name))) {
                         Text("Start Game")
                     }
                 }

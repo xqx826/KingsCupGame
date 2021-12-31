@@ -31,6 +31,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(gameViewModel: KingsCupViewModel(num_players: 4))
+        ContentView(gameViewModel: KingsCupViewModel(num_players: 4, names: ["1", "2", "3", "4"]))
     }
 }

@@ -17,11 +17,11 @@ public class KingsCupViewModel: ObservableObject {
     var deck: Deck {model.deck}
     var num_k: Int {model.num_k}
     
-    public init(num_players: Int) {
+    public init(num_players: Int, names:[String]) {
         self.num_players = num_players
         var temp_players: [Player] = []
         for i in 0..<num_players {
-            let player = Player(name: String(i))
+            let player = Player(id: i, name: names[i])
             if i == 0 {
                 player.isPlaying = true
             }
@@ -46,7 +46,7 @@ public class KingsCupViewModel: ObservableObject {
         }
         var temp_players: [Player] = []
         for i in 0..<num_players {
-            let player = Player(name: players![i].name)
+            let player = Player(id: players![i].id, name: players![i].name)
             player.has_two = players![i].has_two
             player.num_of_eight = players![i].num_of_eight
             if i == curr_player {
