@@ -52,10 +52,9 @@ struct PlayerNameTextField: View {
     @State private var name = ""
     
     var body: some View {
-        TextField("Player \(playerID) name", text: $name)
-            .onSubmit {
-                viewModel.update_name(playerID: playerID, name: name)
-            }
+        TextField("Player \(playerID) name", text: $name, onEditingChanged: { changed in
+            viewModel.update_name(playerID: playerID, name: name)
+        })
     }
 }
 

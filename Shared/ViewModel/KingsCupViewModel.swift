@@ -10,12 +10,11 @@ import Foundation
 public class KingsCupViewModel: ObservableObject {
     private let num_players: Int
     @Published var model: KingsCupGame
-    
+    @Published var num_k: Int = 0
     var curr_card: Card? {model.curr_card}
     var curr_player: Int {model.curr_player}
     var players: [Player]? {model.players}
     var deck: Deck {model.deck}
-    var num_k: Int {model.num_k}
     
     public init(num_players: Int, names:[String]) {
         self.num_players = num_players
@@ -63,6 +62,7 @@ public class KingsCupViewModel: ObservableObject {
             return
         }
         if card.isFacingUp == true {
+
             discard_card()
             if deck.get_length() == 0 {
                 create_new_deck()
@@ -89,8 +89,8 @@ public class KingsCupViewModel: ObservableObject {
             model.players[model.curr_player].num_of_eight += 1
         }
         if card.rank == Rank.king {
-            model.num_k += 1
-            if model.num_k == 4 {
+            self.num_k += 1
+            if self.num_k == 4 {
                 print("LAST K!!!")
             }
         }
@@ -110,6 +110,9 @@ public class KingsCupViewModel: ObservableObject {
             num_eight_present += model.players[i].num_of_eight
         }
         model.deck = Deck(without: num_eight_present)
-        
+    }
+    
+    func clear_num_k() {
+        self.num_k = 0
     }
 }
