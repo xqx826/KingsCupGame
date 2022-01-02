@@ -41,7 +41,7 @@ struct PlayerListView: View {
     @ObservedObject var viewModel: KingsCupViewModel
     var body: some View {
         let players = viewModel.players!
-        ForEach(players, id: \.name) { player in
+        ForEach(players, id: \.id) { player in
             HStack {
                 PlayerView(viewModel: viewModel, player: player)
                 Spacer()

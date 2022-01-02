@@ -11,7 +11,6 @@ public class KingsCupGame {
     public var deck = Deck()
     public var players: [Player]
     public var curr_player: Int = 0
-    public var num_k: Int = 0
     public var curr_card: Card?
     
     public init(players: [Player]) {
