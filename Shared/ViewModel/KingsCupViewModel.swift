@@ -62,7 +62,6 @@ public class KingsCupViewModel: ObservableObject {
             return
         }
         if card.isFacingUp == true {
-
             discard_card()
             if deck.get_length() == 0 {
                 create_new_deck()

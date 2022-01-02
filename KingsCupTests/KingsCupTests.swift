@@ -20,7 +20,7 @@ class KingsCupTests: XCTestCase {
     }
 
     func testFlip() throws {
-        let vm = KingsCupViewModel(num_players: 1)
+        let vm = KingsCupViewModel(num_players: 1, names: ["Sherry"])
         
         XCTAssertNotNil(vm.curr_card)
         XCTAssertFalse(vm.curr_card!.isFacingUp)
