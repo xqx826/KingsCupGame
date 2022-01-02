@@ -15,13 +15,8 @@ struct CardView: View {
     var body: some View {
         if card.isFacingUp {
             CardFront(card: card)
-                .frame(width: 300, height: 500, alignment: .center)
-                .shadow(radius: 15)
         } else {
-            RoundedRectangle(cornerRadius: 50, style: .continuous)
-            .fill(Color.cardBackColor)
-            .frame(width: 300, height: 500, alignment: .center)
-            .shadow(radius: 15)
+            CardBack()
         }
     }
     
@@ -43,7 +38,14 @@ struct SmallerCard: View {
     }
 }
 
-
+struct CardBack: View {
+    var body: some View {
+        RoundedRectangle(cornerRadius: 50, style: .continuous)
+            .fill(Color.cardBackColor)
+            .frame(width: 300, height: 500, alignment: .center)
+            .shadow(radius: 15)
+    }
+}
 
 struct CardFront: View {
     var card: Card
@@ -109,5 +111,7 @@ struct CardFront: View {
                 }
             }
         }
+        .frame(width: 300, height: 500, alignment: .center)
+        .shadow(radius: 15)
     }
 }
