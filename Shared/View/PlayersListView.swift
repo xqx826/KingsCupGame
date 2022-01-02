@@ -12,7 +12,7 @@ struct PlayerView: View {
     var player: Player
     var body: some View {
         HStack {
-            Text("Player \(player.name)")
+            Text("\(player.name)")
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .frame(width: 200, height: 50)
                 .cornerRadius(5)
@@ -32,7 +32,7 @@ struct PlayerView: View {
         }
         .onTapGesture {
             print("player \(player.name) is removing...")
-            viewModel.use_eight(playerID: Int(player.name)!)
+            viewModel.use_eight(playerID: player.id)
         }
     }
 }

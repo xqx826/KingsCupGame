@@ -22,13 +22,15 @@ struct ContentView: View {
             .padding()
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBackground)
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(gameViewModel: KingsCupViewModel(num_players: 4))
+        ContentView(gameViewModel: KingsCupViewModel(num_players: 4, names: ["1", "2", "3", "4"]))
     }
 }
